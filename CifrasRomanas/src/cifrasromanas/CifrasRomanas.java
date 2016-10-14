@@ -11,7 +11,6 @@ package cifrasromanas;
  */
 public class CifrasRomanas {
     
-    private int numero=0;
     /**
      * @param args the command line arguments
      */
