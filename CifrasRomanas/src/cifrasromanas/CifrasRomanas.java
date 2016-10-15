@@ -16,7 +16,7 @@ public class CifrasRomanas {
      */
     public static void main(String[] args) {
         
-        RomanosMetodos romano = new RomanosMetodos(4999);
+        RomanosMetodos romano = new RomanosMetodos(1900);
         System.out.println("el numero es: "+romano.converRom());
     
 }

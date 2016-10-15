@@ -75,7 +75,7 @@ public class RomanosMetodos {
     private void millar(int millar){
         
         String milRom[]={"","M","MM","MMM",   
-                        "","","","",
+                        "IV","V","","",
                          "",""};
         numRomano=milRom[millar]+numRomano;
     }
