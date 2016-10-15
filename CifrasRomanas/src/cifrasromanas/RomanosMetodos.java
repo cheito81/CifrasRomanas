@@ -40,7 +40,7 @@ public class RomanosMetodos {
         int uni=0, dec=0, cen=0, um=0;
          uni = numero % 10;
          um=(numero-uni) /1000;
-         cen=(numero-uni-(um*1000)-(cen*100))/100;
+         cen=(numero-uni-(um*1000))/100;
          dec=(numero-uni-(um*1000)-(cen*100))/10;
         
          unidades(uni);
