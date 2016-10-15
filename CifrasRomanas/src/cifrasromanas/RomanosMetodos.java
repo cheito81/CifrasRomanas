@@ -40,10 +40,13 @@ public class RomanosMetodos {
         int uni=0, dec=0, cen=0, um=0;
          uni = numero % 10;
          um=(numero-uni) /1000;
-         cen=(numero-uni-(um*1000)-(cen*100))/10;
-        unidades(uni);
-        centenas(cen);
-        millar(um);
+         cen=(numero-uni-(um*1000)-(cen*100))/100;
+         dec=(numero-uni-(um*1000)-(cen*100))/10;
+        
+         unidades(uni);
+         decenas(dec); 
+         centenas(cen);
+         millar(um);
         
         return numRomano;
     }
@@ -55,7 +58,7 @@ public class RomanosMetodos {
                          "VIII","IX"};
         numRomano=uniRom[unidad];
     }
-    private void dencenas(int decenas){
+    private void decenas(int decenas){
         
         String decRom[]={"","X","XX","XXX",   
                         "XL","L","LX","LXX",
