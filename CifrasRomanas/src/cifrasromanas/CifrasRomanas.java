@@ -15,7 +15,9 @@ public class CifrasRomanas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        
+        RomanosMetodos romano = new RomanosMetodos(56);
+        System.out.println("el numero es: "+romano.converRom());
     
+}
 }
