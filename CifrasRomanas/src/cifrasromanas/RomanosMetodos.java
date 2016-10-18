@@ -1,4 +1,5 @@
 /*
+ * Author: Jose Giménez , Cristian Gutiérrez
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,14 +13,17 @@ package cifrasromanas;
 import java.util.*;
 public class RomanosMetodos {
     
-    private int numero=0;
+    private int numero;
     private String numRomano="";
+    
+    public RomanosMetodos() {
+    }
 
     public RomanosMetodos(int numero) {
         this.numero=numero;
     }
     
-    public boolean valiadacion(){
+    public boolean validacion(){
         if (this.numero<5000 && this.numero>0){
             return true;
         }
@@ -34,6 +38,10 @@ public class RomanosMetodos {
 
     public String getNumRomano() {
         return numRomano;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
         
     public String converRom(){
@@ -75,10 +83,8 @@ public class RomanosMetodos {
     private void millar(int millar){
         
         String milRom[]={"","M","MM","MMM",   
-                        "IV","V","","",
+                        "IV","","","",
                          "",""};
         numRomano=milRom[millar]+numRomano;
     }
-    
-    
 }
