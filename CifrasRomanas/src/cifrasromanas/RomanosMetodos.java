@@ -43,7 +43,15 @@ public class RomanosMetodos {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-        
+    
+    /*
+    *Function : ConverRom
+    *Unidades: Dividimos num entre 10 y nos quedamos el resto 
+    *Unidades de millar : (numero menos unidad ) lo dividimos entre 1000
+    *Centenas: (restamos numero - unidades-unidades de millar * 1000)y dividimos entre 100
+    *Decenas : (restamos numero - unidades -unidades de millar * 1000)-(centenas *100)
+    *dividimos entre 10
+    */
     public String converRom(){
         int uni=0, dec=0, cen=0, um=0;
          uni = numero % 10;
