@@ -1,15 +1,11 @@
 /*
- * Author: Jose Giménez , Cristian Gutiérrez
+ * Author: Jose Giménez , Cristian Gutiérrez.
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package cifrasromanas;
 
-/**
- *
- * @author alumne
- */
 import java.util.*;
 public class RomanosMetodos {
     
@@ -24,7 +20,8 @@ public class RomanosMetodos {
     }
     
     public boolean validacion(){
-        if (this.numero<5000 && this.numero>0){
+
+        if (this.numero<5000 && this.numero>0) {
             return true;
         }
         else{
@@ -45,12 +42,9 @@ public class RomanosMetodos {
     }
     
     /*
-    *Function : ConverRom
-    *Unidades: Dividimos num entre 10 y nos quedamos el resto 
-    *Unidades de millar : (numero menos unidad ) lo dividimos entre 1000
-    *Centenas: (restamos numero - unidades-unidades de millar * 1000)y dividimos entre 100
-    *Decenas : (restamos numero - unidades -unidades de millar * 1000)-(centenas *100)
-    *dividimos entre 10
+    *Function ConverRom: Separate units, dozens, hundreds , thousand the
+    *number to convert and we send the number to the corresponding method 
+    *return the number in roman
     */
     public String converRom(){
         int uni=0, dec=0, cen=0, um=0;
@@ -67,6 +61,12 @@ public class RomanosMetodos {
         return numRomano;
     }
     
+     /**
+     * Method decenas: Add the letter to the units
+     * @param unidad  : receive units of function ConverRom
+     * @param uniRom[]: saves units of possible conversions
+     * @param numRomano : adds the letter 
+     */
     private void unidades(int unidad){
         
         String uniRom[]={"","I","II","III",   
@@ -74,6 +74,13 @@ public class RomanosMetodos {
                          "VIII","IX"};
         numRomano=uniRom[unidad];
     }
+    
+    /**
+     * Method decenas: Add the letter to the dozens
+     * @param centena  : receive dozens of function ConverRom
+     * @param decRom[]: saves dozens of possible conversions
+     * @param numRomano : adds the letter 
+     */
     private void decenas(int decenas){
         
         String decRom[]={"","X","XX","XXX",   
@@ -81,6 +88,13 @@ public class RomanosMetodos {
                          "LXXX","XC"};
         numRomano=decRom[decenas]+numRomano;
     }
+    
+     /**
+     * Method centenas: Add the letter to the hundreds
+     * @param centena  : receive hundreds of function ConverRom
+     * @param cenRom[]: saves hundreds of possible conversions
+     * @param numRomano : adds the letter 
+     */
     private void centenas(int centena){
         
         String cenRom[]={"","C","CC","CCC",   
@@ -88,6 +102,13 @@ public class RomanosMetodos {
                          "DCCC","CM"};
         numRomano=cenRom[centena]+numRomano;
     }
+    
+    /**
+     * Method millar: Add the letter to the thousands
+     * @param millar  : receive thousands of function ConverRom
+     * @param milRom[]: saves thousands of possible conversions
+     * @param numRomano : adds the letter 
+     */
     private void millar(int millar){
         
         String milRom[]={"","M","MM","MMM",   
