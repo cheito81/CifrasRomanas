@@ -23,8 +23,7 @@ public class CifrasRomanas {
        int opcion,stop=1;
        
        while(stop!=0)
-        { 
-            
+        {   
     try{
             Scanner scan = new Scanner(System.in);
             System.out.println("1-calcular romano");
