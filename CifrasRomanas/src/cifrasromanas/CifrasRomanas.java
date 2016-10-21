@@ -21,11 +21,11 @@ public class CifrasRomanas {
   public static void main(String[] args) {
        int numero;
        int opcion,stop=1;
-       Scanner scan = new Scanner(System.in);
-        
+       
+       while(stop!=0)
+        { 
     try{
-        while(stop!=0)
-        {
+            Scanner scan = new Scanner(System.in);
             System.out.println("1-calcular romano");
             System.out.println("2-salir");
             opcion=scan.nextInt();
@@ -49,10 +49,12 @@ public class CifrasRomanas {
                     System.out.println("Fin del programa");
                 break;
             }//switch
-        }//while   
+          
     }//try
     catch(InputMismatchException e){
+        System.out.println("hola catch");
             System.out.println("Number not valid ,rank(1-5000)");
     }
+    }//while 
   }//main
 }//class
